@@ -1,0 +1,301 @@
+[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_sessionId",
+				"type": "bytes"
+			},
+			{
+				"name": "_userAddress",
+				"type": "address"
+			},
+			{
+				"name": "_wild",
+				"type": "uint256"
+			},
+			{
+				"name": "_genoms",
+				"type": "uint256[]"
+			},
+			{
+				"name": "_seed",
+				"type": "bytes"
+			},
+			{
+				"name": "_sign",
+				"type": "bytes"
+			}
+		],
+		"name": "closeGame",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_userAddress",
+				"type": "address"
+			},
+			{
+				"name": "_seed",
+				"type": "bytes"
+			}
+		],
+		"name": "endGame",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_userAddress",
+				"type": "address"
+			},
+			{
+				"name": "_seed",
+				"type": "bytes"
+			}
+		],
+		"name": "initNewPlayer",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "id",
+				"type": "bytes"
+			},
+			{
+				"indexed": false,
+				"name": "_address",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "w",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "g",
+				"type": "uint256[]"
+			},
+			{
+				"indexed": false,
+				"name": "pw",
+				"type": "uint256[]"
+			},
+			{
+				"indexed": false,
+				"name": "pi",
+				"type": "uint256[]"
+			}
+		],
+		"name": "Logchan",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "__userAddress",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "senderAddr",
+				"type": "address"
+			}
+		],
+		"name": "logChannel",
+		"type": "event"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_sessionId",
+				"type": "bytes"
+			},
+			{
+				"name": "_userAddress",
+				"type": "address"
+			},
+			{
+				"name": "_wild",
+				"type": "uint256"
+			},
+			{
+				"name": "_genoms",
+				"type": "uint256[]"
+			},
+			{
+				"name": "_sign",
+				"type": "bytes"
+			}
+		],
+		"name": "startGame",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_sigseed",
+				"type": "bytes"
+			},
+			{
+				"name": "_min",
+				"type": "uint256"
+			},
+			{
+				"name": "_max",
+				"type": "uint256"
+			}
+		],
+		"name": "generateRnd",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "pure",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_userAddress",
+				"type": "address"
+			}
+		],
+		"name": "getInventory",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_userAddress",
+				"type": "address"
+			}
+		],
+		"name": "getItem",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_userAddress",
+				"type": "address"
+			}
+		],
+		"name": "getWilds",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "items",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_hash",
+				"type": "bytes32"
+			},
+			{
+				"name": "signature",
+				"type": "bytes"
+			}
+		],
+		"name": "recoverSigner",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "pure",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "wilds",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
